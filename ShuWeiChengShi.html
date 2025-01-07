@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>數位程式</title>
+        <link rel="stylesheet" href="Untitled-2.css">
+        <link rel="icon" href="favicon_logosc/android-chrome-512x512.png">
+    </head>
+    <body>
+        <nav id="top">
+            <ul>
+                <li><a href="ZiXu.html">自敘</a></li>
+                <li><a href="SheYingJi.html">攝影集</a></li>
+                <li><a href="ShuWeiTuWenLu.html">數位圖文錄</a></li>
+                <li><a href="ShuWeiShengYingLu.html">數位聲影錄</a></li>
+                <li><a href="ShuHuaCe.html">書畫冊</a></li>
+                <li><a href="ShuWeChengShi">數位程式</a></li>
+            </ul>
+        </nav>
+        <div class="box">
+            <h1>數&nbsp;位&nbsp;程&nbsp;式</h1>
+            <div class="content">
+                <div class="ShuWeChengShi">
+                <div class="container">
+                    <div class="mySlides fade">
+                        <img src="ShuWeiChengShi/Capybara_(Hydrochoerus_hydrochaeris).jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="ShuWeiChengShi/Cat_August_2010-3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="ShuWeiChengShi/images (12).jpeg" style="width:100%">
+                    </div>
+            
+                    <!-- 前一張/下一張按鈕 -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                    <!-- 點點導航 -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                </div>   
+                </div>
+            
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+            
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+            
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+            
+                    function showSlides(n) {
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+            
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+            
+                        for (let i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+            
+                        for (let i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+            
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
+</html>
+

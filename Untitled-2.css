@@ -1,0 +1,334 @@
+body{
+    background-color: rgb(1, 255, 213);
+    font-size: 16px;
+    font-family: "XingKaiTi",sans-serif;
+}
+.box{
+    background-color: rgb(191, 246, 255);
+    width: 70%;
+    margin: 15px auto;
+    padding:  5%;
+    border-radius: 20em;
+    /* 平板樣式 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .box {
+        width: 70%;
+        border-radius: 30px;
+    }
+}
+
+/* 桌面樣式 */
+@media (min-width: 1025px) {
+    body {
+        font-size: 20px;
+    }
+
+    .box {
+        width: 100%;
+        border-radius: 40px;
+    }
+}
+    }
+        .box h1{
+            font-size: 5vw;
+            word-spacing: 100%;
+            text-align: center;
+            margin-bottom: 100%;  
+            white-space: nowrap; /* 防止文字換行 */
+        }
+        .ZiHuaXing img{
+            width:auto ;
+            height:314.4;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }   
+            .FuZhuang{
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+                width: 100%; 
+                max-width: 1000px; 
+                margin: 0 auto;
+            }
+            .FuZhuang img {
+                width: 100%; /* 讓圖片根據容器大小自適應 */
+                height: auto; /* 保持圖片比例 */
+                max-width: 610px; /* 根據需求調整圖片的最大寬度 */
+            }
+            .JiaoSe img{
+                max-width: 610px !important;  
+            }
+                .QunZu {
+                    display: flex; /* 使用Flexbox讓圖片在同一行 */
+                    gap: 10px; /* 圖片間距 */
+                }
+                .photo-row img{
+                    width: 100%;
+                    height: auto;
+                    object-fit:contain;
+                }
+                .ph-row{ 
+                    display: flex;          /* 使用 Flexbox 將圖片置中 */
+                    justify-content: center; /* 水平置中 */
+                    align-items: center; 
+                }
+                    .ph-row img{ 
+                        width: 610px; /* 根據需要設置圖片的寬度 */
+                        height: auto; /* 保持圖片比例 */
+                        max-width: 100%; /* 確保圖片不超過容器寬度 */
+                    }
+                .photo-row{
+                    display: flex;          /* 使用 Flexbox 將圖片置中 */
+                    justify-content: center; /* 水平置中 */
+                    align-items: center;     /* 垂直置中（適用於固定高度的容器） */
+                }
+                    .photo-row img{
+                        width: 300px; /* 根據需要設置圖片的寬度 */
+                        height: auto; /* 保持圖片比例 */
+                        max-width: 100%; /* 確保圖片不超過容器寬度 */
+                        margin-right: 10px;  /* 設定圖片之間的間隔 */
+                    }
+                        .photo-row img:last-child {
+                            margin-right: 0;      /* 移除最後一張圖片的右間隔 */
+                        }
+                .pho-row{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    .pho-row img{
+                        width: 300px;
+                        height: auto;
+                        max-width: 100%;
+                        margin-right: 10px;
+                    }
+                        .pho-row img:last-child{
+                            margin-right: 0;
+                        }
+            .date{
+                color: rgb(0, 0, 0);
+                }
+                .ic{
+                    text-align: center;
+                    }
+                    .ic img {
+                        width: 300px !important ; 
+                        height: auto !important ;
+                    } 
+                .date span{
+                    font-weight: 700; 
+                    color: rgb(73, 77, 61);
+                    text-shadow: 
+                    -1px -1px 0  rgb(243, 255, 208),
+                    1px -1px 0 rgb(243, 255, 208),
+                    -1px 1px 0 rgb(243, 255, 208),
+                    1px 1px 0 rgb(243, 255, 208);
+                }
+                .ppic {
+                    display: flex;
+                    justify-content: center;
+                    gap: 55px;    
+                }  
+                .pppic{
+                   display: flex;
+                   justify-content: center;
+                   gap: 57px; 
+                }  
+                .JiaoSe img{
+                    display: block; /* 使圖片成為區塊元素，這樣 margin-top 或 margin-bottom 可以正常應用 */
+                }  
+                    .JiaoSe img + img{
+                        margin-top: 10px;
+                    }  
+.ShuWeChengShi {
+    position: absolute; /* 绝对定位 */
+    top: 300px;          /* 距离顶部 50px */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    }
+    @media (min-width: 1025px) {
+    .container {
+        width: 800px; /* 容器宽度 */
+        height: 600px; /* 容器高度，保持 4:3 比例 */
+        margin: auto;
+    }
+     /* 圖片樣式 */
+     .mySlides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 保持比例，裁切多余部分 */
+    }      
+        }
+    .responsive-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;      /* 子元素垂直方向顶部对齐 */
+        width: 90%;                   /* 容器宽度 */
+        max-width: 800px;
+        aspect-ratio: 4 / 3;          /* 保持宽高比 */
+        margin: auto;
+        overflow: hidden;
+      }                
+    /* 幻燈片 */
+    .mySlides {
+        display: none; /* 默認隱藏 */
+        width: 400px; /* 容器宽度 */
+        height: 300px; /* 容器高度，保持 4:3 比例 */
+        object-position: top;         /* 图片顶部对齐 */
+        object-fit: contain;          /* 完整显示图片，保持比例 */
+        transition: transform 0.5s ease, opacity 0.5s ease; /* 缓动效果 */
+    }
+                    
+    /* 前/後按鈕 */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+                    
+    .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+    }
+                    
+    .next {
+        right: 0;
+        border-radius: 0 3px 3px 0;
+    }
+                    
+    /* 點點導航 */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.5s ease;
+        }
+                    
+    .active, .dot:hover {
+        background-color: #717171;
+        }
+                    
+
+.pic>img{
+    width: 200px;
+}
+.box{
+    text-align: center;
+}
+body{
+    margin: 0px;
+    margin-top: 100px;
+    }
+    #top{
+        background-color: rgba(90, 178, 255, 0.833);
+        padding: 7px;
+        margin: 0px;
+        position: fixed;
+        top:0;
+        z-index: 2;
+        width: 100%;
+    }
+        #top ul{
+        list-style: none;
+        padding-left: 0;
+            }
+        #top ul li{
+        display:inline-block;
+        background-color: rgba(191, 246, 255, 0.73);
+        width: 150px;
+        padding: 10px;
+        border-radius: 20em;
+        margin: 10px 0;
+        text-align: center
+
+            }
+        #top ul li a{
+        color: rgb(0, 38, 3);
+        text-decoration: none;
+        font-size: 1em;
+            }
+        #top ul li:hover a{
+        color : rgb(0, 183, 15);
+            }
+        #top ul li:hover{display:inline-block;
+         background-color:  rgba(57, 77, 80, 0.73);
+            }
+            @media (max-width: 1025px) {
+                #top ul li {
+                    width: 25%; /* 25% 的寬度 */
+                    padding: 0.5em;
+                }
+                #top ul li a {
+                    font-size: 1em;
+                }
+            @media (max-width: 480px) {
+                #top ul li {
+                    width: 40%; /* 更小裝置的寬度 */
+                    padding: 0.3em;
+                }
+                #top ul li a {
+                    font-size: 0.7em;
+                }
+            }
+
+            }
+    .YingYin .pic video{
+        width:85% ;
+        max-width: 85% ;
+        height: auto;
+    }
+@font-face{
+    font-family: "XingKaiTi";
+    src: url("favicon_logosc/DFW_XK5.woff2") format("woff2");
+}
+#scrollToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(1, 255, 213);
+    background-image:url(favicon_logosc/HuiYeSho.png) ;
+    background-size:50px 110px ;
+    background-repeat:no-repeat ;
+    background-position:center ;
+    color: #d0e7ff;
+    width: 25px;
+    height: 125px;
+    border: none;
+    border-radius: 40px ;
+    padding: 50px;
+    cursor: pointer;
+}
+    #scrollToTop:hover{
+        background-color:  rgba(191, 246, 255, 0.637);
+        background-image:url(favicon_logosc/HuiYeSho.png) ;
+    }
+    /* 當螢幕寬度小於或等於 768px（手機和平板）時隱藏按鈕 */
+    @media (max-width: 768px) {
+    #scrollToTop {
+     display: none;
+    }
+}
